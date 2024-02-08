@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@next"></script>
+    
+    <!-- Slick Slide -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="home.css" />
+
+    <link rel="stylesheet" href="initiative.css">
+    <script src="initiative.js"></script>
+
+  
+</head>
+
+<body>
+<div id="root">
+    <!-- Navbar -->
+    <div style="background-color: #4a694c; overflow: hidden; padding:10px;">
+        <a href="../Home/home.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+        <a href="../Problem/problem.html" style="float: left; display: block; color: #8affd6; text-align: center; padding: 14px 16px; text-decoration: underline; font-weight: bold;">Learn</a>
+        <a href="../News/news.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">News</a>
+        <a href="../Quiz/quiz.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Quiz</a>
+        <a href="../Game/game.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Game</a>
+      </div>
+
+    <!-- Secondary Navbar-->
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+              <a href="../Problem/problem.html" style="color: #333; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Problem of Waste Management</a>
+          </div>
+          
+          <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+            <a href="../Initiatives/initiative.html" style="font-weight: bold; color: #4a694c; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Implemented Initiatives</a>
+        </div>
+
+          <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+              <a href="../Stakeholders/stakeholder.html" style="color: #333; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Stakeholders Involved</a>
+          </div>
+      </div>
+  </div>
+  
+    <!--START CONTENT -->
+    <div>
+      <div class="carousel" style="margin-top:2%; margin-bottom:1.5%;">
+        <ul class="slides">
+          <input type="radio" name="radio-buttons" id="img-1" checked />
+          <li class="slide-container">
+            <div class="slide-image">
+              <img src="../images/masterplan.png">
+            </div>
+            <div class="carousel-controls">
+              <label for="img-8" class="prev-slide">
+                <span>&lsaquo;</span>
+              </label>
+              <label for="img-2" class="next-slide">
+                <span>&rsaquo;</span>
+              </label>
+            </div>
+          </li>
+    
+          <!-- Slide 2 -->
+          <input type="radio" name="radio-buttons" id="img-2" />
+          <li class="slide-container">
+            <div class="slide-image">
+              <img src="../images/zerowaste.png">
+            </div>
+            <div class="carousel-controls">
+              <label for="img-1" class="prev-slide">
+                <span>&lsaquo;</span>
+              </label>
+              <label for="img-3" class="next-slide">
+                <span>&rsaquo;</span>
+              </label>
+            </div>
+          </li>
+    
+          <!-- Slide 3 -->
+          <input type="radio" name="radio-buttons" id="img-3" />
+          <li class="slide-container">
+            <div class="slide-image">
+              <img src="../images/closeloop.png">
+            </div>
+            <div class="carousel-controls">
+              <label for="img-2" class="prev-slide">
+                <span>&lsaquo;</span>
+              </label>
+              <label for="img-4" class="next-slide">
+                <span>&rsaquo;</span>
+              </label>
+            </div>
+          </li>
+    
+          <!-- Slide 4 -->
+          <input type="radio" name="radio-buttons" id="img-4" />
+          <li class="slide-container">
+            <div class="slide-image">
+              <img src="../images/circular.png">
+            </div>
+            <div class="carousel-controls">
+              <label for="img-3" class="prev-slide">
+                <span>&lsaquo;</span>
+              </label>
+              <label for="img-5" class="next-slide">
+                <span>&rsaquo;</span>
+              </label>
+            </div>
+          </li>
+    
+          <!-- Slide 5 -->
+          <input type="radio" name="radio-buttons" id="img-5" />
+          <li class="slide-container">
+            <div class="slide-image">
+              <img src="../images/wte.png">
+            </div>
+            <div class="carousel-controls">
+              <label for="img-4" class="prev-slide">
+                <span>&lsaquo;</span>
+              </label>
+              <label for="img-6" class="next-slide">
+                <span>&rsaquo;</span>
+              </label>
+            </div>
+          </li>
+    
+          <!-- Slide 6 -->
+          <input type="radio" name="radio-buttons" id="img-6" />
+          <li class="slide-container">
+            <div class="slide-image">
+              <img src="../images/envtsvc.png">
+            </div>
+            <div class="carousel-controls">
+              <label for="img-5" class="prev-slide">
+                <span>&lsaquo;</span>
+              </label>
+              <label for="img-7" class="next-slide">
+                <span>&rsaquo;</span>
+              </label>
+            </div>
+          </li>
+
+          <!-- Slide 7 -->
+          <input type="radio" name="radio-buttons" id="img-7" />
+          <li class="slide-container">
+            <div class="slide-image">
+              <img src="../images/tech.png">
+            </div>
+            <div class="carousel-controls">
+              <label for="img-6" class="prev-slide">
+                <span>&lsaquo;</span>
+              </label>
+              <label for="img-8" class="next-slide">
+                <span>&rsaquo;</span>
+              </label>
+            </div>
+          </li>
+
+          <!-- Slide 8 -->
+          <input type="radio" name="radio-buttons" id="img-8" />
+          <li class="slide-container">
+            <div class="slide-image">
+              <img src="../images/collab.png">
+            </div>
+            <div class="carousel-controls">
+              <label for="img-7" class="prev-slide">
+                <span>&lsaquo;</span>
+              </label>
+              <label for="img-1" class="next-slide">
+                <span>&rsaquo;</span>
+              </label>
+            </div>
+          </li>
+    
+          <!-- Add more slides as needed -->
+    
+          <!-- Dots for navigation -->
+          <div class="carousel-dots">
+            <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+            <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+            <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+            <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
+            <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
+            <label for="img-6" class="carousel-dot" id="img-dot-6"></label>
+            <label for="img-7" class="carousel-dot" id="img-dot-7"></label>
+            <label for="img-8" class="carousel-dot" id="img-dot-8"></label>
+            <!-- Add more dots as needed -->
+          </div>
+        </ul>
+      </div>
+    </div>
+    
+      
+    <!--END CONTENT -->
+           
+  <!-- Bottom Navbar -->
+  <div class="col-12">
+    <hr style="border-top: 1px solid #4a694c; display:flex; margin:auto; margin-top:10px;">
+  </div>
+
+<div style="display: flex; margin: auto; width: 90%; padding: 10px; align-items: flex-start;">
+
+  <div style="margin-left:5%; margin-right: 6%; width: 150px; height: 140px; overflow: hidden;">
+      <img src="../images/binlogo.png" alt="Learn" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+
+  <!-- Education Category -->
+  <div style="margin-right: 7%;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Education</p>
+      <a href="../Problem/problem.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Problem of Waste Management</a>
+      <a href="../Initiatives/initiative.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Implemented Initiatives</a>
+      <a href="../Stakeholders/stakeholder.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Stakeholders involved</a>
+  </div>
+  <!-- News Category -->
+  <div style="margin-right: 10%; min-height: 150px;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">News</p>
+    <a href="../News/news.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Latest news</a>
+</div>
+  <!-- Quiz Category -->
+  <div style="margin-right: 7%; min-height: 150px;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Quiz</p>
+      <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Sorting</a>
+      <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Management</a>
+  </div>
+
+  <!-- Game Category -->
+  <div style="margin-right: 10%; min-height: 150px;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Game</p>
+      <a href="../Game/game.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Match the cards!</a>
+  </div>
+</div>

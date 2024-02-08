@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/> 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <title>News</title>
+
+  <style>
+
+    .navbar-nav {
+          display: flex;
+          justify-content: space-between;
+          flex-grow: 1;
+        }
+      
+        body {
+          overflow-x: hidden;
+        }
+      
+        .btn-outline-secondary:hover {
+          border-color: #4CAF50; 
+          color: #4CAF50; 
+          background-color: transparent !important;
+        }
+        
+    .article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #41804F;
+      margin: 10px;
+      height: 100%;
+      margin:1%;
+    }
+
+    .image-container {
+      width: 400px;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .article img {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .search label {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .search input[type="submit"] {
+      width: 400px;
+      margin: auto;
+      display: block;
+    }
+
+    @media (max-width: 992px) {
+      .search label {
+        font-size: 30px; /* Adjust font size for smaller screens */
+      }
+    }
+
+    @media (max-width: 575px) {
+      .search label {
+        font-size: 20px; /* Further adjust font size for even smaller screens */
+      }
+      .search input[type="submit"] {
+        width: 300px; /* Adjust button width for smaller screens */
+      }
+    }
+
+    .btn {
+      background-color: transparent;
+      border: 2px solid #41804F;
+      color: #41804F;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    /* Style on hover */
+    .btn:hover {
+      background-color: #41804F;
+      color: #fff;
+    }
+
+    @media (max-width: 992px) {
+      .image-container {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .image-container {
+        max-width: 100%;
+        height: auto;
+      }
+      .article img {
+        max-width: 100%;
+      }
+    }
+
+    .text-center {
+      text-align: center;
+      margin-top: 20px; /* Add top margin to center the button */
+    }
+
+    .view-more-btn {
+      background-color: transparent;
+      border: 2px solid #41804F;
+      border-width: 3px; /* Set the border width as needed */
+      color: #41804F;
+      padding: 5px 50px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div id="root">
+    <!-- Navbar -->
+    <div style="background-color: #4a694c; overflow: hidden; padding:10px;">
+        <a href="../Home/home.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+        <a href="../Problem/problem.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Learn</a>
+        <a href="../News/news.html" style="float: left; display: block; color: #8affd6; text-align: center; padding: 14px 16px; text-decoration: underline; font-weight: bold;">News</a>
+        <a href="../Quiz/quiz.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Quiz</a>
+        <a href="../Game/game.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Game</a>
+      </div>
+
+  <form class="search" action="" id="searchForm">
+    <label for="">News on Waste Management in Singapore</label>
+    <input type="submit" value="Explore Articles"/>
+  </form>
+
+  <div id="News" class="tabcontent">
+    <div class="container">
+      <div class="row" id="newsContainer">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navbar -->
+  <div class="col-12">
+    <hr style="border-top: 1px solid #4a694c; display:flex; margin:auto; margin-top:10px;">
+  </div>
+
+<div style="display: flex; margin: auto; width: 90%; padding: 10px; align-items: flex-start;">
+
+  <div style="margin-left:5%; margin-right: 6%; width: 150px; height: 140px; overflow: hidden;">
+      <img src="../images/binlogo.png" alt="Learn" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+
+  <!-- Education Category -->
+  <div style="margin-right: 7%;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Education</p>
+    <a href="../Problem/problem.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Problem of Waste Management</a>
+    <a href="../Initiatives/initiative.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Implemented Initiatives</a>
+    <a href="../Stakeholders/stakeholder.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Stakeholders involved</a>
+</div>
+<!-- News Category -->
+<div style="margin-right: 10%; min-height: 150px;">
+  <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">News</p>
+  <a href="../News/news.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Latest news</a>
+</div>
+<!-- Quiz Category -->
+<div style="margin-right: 7%; min-height: 150px;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Quiz</p>
+    <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Sorting</a>
+    <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Management</a>
+</div>
+
+<!-- Game Category -->
+<div style="margin-right: 10%; min-height: 150px;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Game</p>
+    <a href="../Game/game.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Match the cards!</a>
+</div>
+</div>
+
+  <script>
+    const searchForm = document.getElementById('searchForm');
+    const apiKey = '736138ef205d404da6674175001e8b2e'; // Replace with your NewsAPI key
+    const newsContainer = document.getElementById('newsContainer');
+
+    searchForm.addEventListener('submit', retrieveData);
+
+    function retrieveData(e, pageSize = 4) {
+      e.preventDefault();
+
+      const url = `https://newsapi.org/v2/everything?q=singapore-waste&apiKey=${apiKey}&pageSize=${pageSize}`;
+
+      axios
+        .get(url)
+        .then((response) => {
+          const data = response.data;
+          console.log(data);
+          populateNews(data.articles);
+          createViewMoreButton(data.totalResults, pageSize);
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    }
+
+    function populateNews(articles) {
+      newsContainer.innerHTML = ''; // Clear existing content
+
+      articles.forEach((article) => {
+        const articleDiv = document.createElement('div');
+        articleDiv.className = 'col-md-6'; // Bootstrap grid class for 2 columns
+
+        const articleContent = document.createElement('div');
+        articleContent.className = 'article';
+
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'image-container';
+
+        const img = document.createElement('img');
+        img.src = article.urlToImage;
+
+        const title = document.createElement('h5');
+        title.textContent = article.title;
+
+        const author = document.createElement('p');
+        author.textContent = 'Author: ' + (article.author ? article.author : 'Unknown');
+
+        const publishedAt = document.createElement('p');
+        publishedAt.textContent = 'Published At: ' + new Date(article.publishedAt).toLocaleDateString();
+
+        imgContainer.appendChild(img);
+        articleContent.appendChild(imgContainer);
+        articleContent.appendChild(title);
+        articleContent.appendChild(author);
+        articleContent.appendChild(publishedAt);
+
+        // Create a link to the article's website
+        const visitLink = document.createElement('a');
+        visitLink.className = 'btn';
+        visitLink.textContent = 'Visit news website';
+        visitLink.href = article.url;
+        visitLink.target = '_blank';
+
+        articleContent.appendChild(visitLink);
+
+        articleDiv.appendChild(articleContent);
+        newsContainer.appendChild(articleDiv);
+      });
+    }
+
+    function createViewMoreButton(totalResults, currentSize) {
+  if (totalResults > currentSize) {
+    const viewMoreButton = document.createElement('button');
+    viewMoreButton.textContent = 'View More Articles';
+    viewMoreButton.className = 'btn view-more-btn'; // Added 'view-more-btn' class
+    viewMoreButton.addEventListener('click', () => {
+      const newSize = currentSize + 4; // You can adjust the increment as needed
+      retrieveData(event, newSize);
+    });
+
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'text-center'; // Center the button
+    buttonContainer.appendChild(viewMoreButton);
+    newsContainer.appendChild(buttonContainer);
+  }
+}
+  </script>
+</body>
+</html>

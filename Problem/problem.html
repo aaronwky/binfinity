@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@next"></script>
+    
+    <!-- Slick Slide -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="home.css" />
+    <style>
+        .navbar-nav {
+          display: flex;
+          justify-content: space-between;
+          flex-grow: 1;
+        }
+      
+        body {
+          overflow-x: hidden;
+        }
+      
+        .btn-outline-secondary:hover {
+          border-color: #4CAF50; 
+          color: #4CAF50; 
+          background-color: transparent !important;
+        }
+      
+      </style>
+  
+</head>
+
+<body>
+<div id="root">
+    <!-- Navbar -->
+    <div style="background-color: #4a694c; overflow: hidden; padding:10px;">
+        <a href="../Home/home.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+        <a href="../Problem/problem.html" style="float: left; display: block; color: #8affd6; text-align: center; padding: 14px 16px; text-decoration: underline; font-weight: bold;">Learn</a>
+        <a href="../News/news.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">News</a>
+        <a href="../Quiz/quiz.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Quiz</a>
+        <a href="../Game/game.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Game</a>
+      </div>
+
+    <!-- Secondary Navbar-->
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+              <a href="../Problem/problem.html" style="font-weight: bold; color: #4a694c; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Problem of Waste Management</a>
+          </div>
+  
+          <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+              <a href="../Initiatives/initiative.html" style="color: #333; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Implemented Initiatives</a>
+          </div>
+  
+          <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+              <a href="../Stakeholders/stakeholder.html" style="color: #333; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Stakeholders Involved</a>
+          </div>
+      </div>
+  </div>
+  
+    <!--START CONTENT -->
+    <div class="container">
+
+      <div class="row featurette mt-5 align-items-center " style="margin-bottom:4%" >
+          <div class="col-md-8">
+              <p class="lead display-6 text-center">Limited Land Space for Waste Disposal</p>
+              <p class="lead">Singapore is a small and densely populated city-state with limited available land for waste disposal. It's land scarcity makes it challenging to find suitable locations for landfills or waste disposal facilities. Hence, the need for efficient use of available land has prompted the exploration of alternative waste management methods.
+              </p>
+              <p><strong style="color: darkgreen;">Fun Fact:</strong> Incinerated ash and non-incinerable waste are deposited to Semakau Landfill—the city-state’s sole landfill—which is projected to run out of space by 2035, or even earlier given the spike in waste generation amid the Covid-19 pandemic.</p>
+
+          </div>
+          <div class="col-md-4">
+            <div style="width: 300px; height: 325px; overflow: hidden; border-radius: 10px; margin-left:20%;">
+                <img src="../images/landfill.jpg" alt=""
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded"
+                    style="object-fit: cover; width: 100%; height: 100%; margin-left: 20px;">
+            </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette mt-5 align-items-center " style="margin-bottom:4%">
+        <div class="col-md-4">
+          <div style="width: 300px; height: 325px; overflow: hidden; border-radius: 10px; margin-left:20%;">
+              <img src="../images/recycling.jpeg" alt=""
+                  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded"
+                  style="object-fit: cover; width: 100%; height: 100%; margin-left: 20px;">
+          </div>
+      </div>
+        <div class="col-md-8">
+            <p class="lead display-6 text-center">High Waste Generation, Low Recycling Rates</p>
+            <p class="lead">Singapore faces a significant challenge with high per capita waste generation, partially due to its affluent and consumer-driven society. This could be due to a culture of convenience and disposable products, contributing to environmental concerns. Despite efforts to promote recycling, the recycling rates in Singapore have historically been lower than desired.  
+            </p>
+            <p><strong style="color: darkgreen;">Fun Fact:</strong> Despite awareness-raising campaigns to encourage a 3R (reduce, reuse and recycle) mindset, and designating 2019 as a ‘Year towards zero waste’, Singapore’s domestic recycling rate dropped from 22 per cent in 2018 to 17 per cent in 2019 – only 4 per cent of plastic and 18 per cent of food is recycled in the city-state.</p>
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette mt-5 align-items-center " style="margin-bottom:4%">
+      <div class="col-md-8">
+          <p class="lead display-6 text-center">Waste-to-energy initiatives are not sustainable in the long run</p>
+          <p class="lead">Waste-to-energy (WTE) initiatives involve the conversion of various types of waste materials into energy, typically in the form of incineration. However, WTE initiatives are not sustainable in the long run as they do not address the root cause of waste generation and could disincentivise recycling efforts. Furthermore, the incineration process releases harmful pollutants into the atmosphere, contributing to air pollution and potential health hazards. Balancing energy recovery with environmental considerations remains a key challenge for sustainable waste management.
+          </p>
+          <p><strong style="color: darkgreen;">Fun Fact:</strong> While more than 40% of Singapore's waste are incinerated, the energy generated from incineration only accounted for 3% of Singapore's electricity needs.</p>
+
+
+      </div>
+      <div class="col-md-4">
+        <div style="width: 300px; height: 325px; overflow: hidden; border-radius: 10px; margin-left:20%;">
+            <img src="../images/energy.jpg" alt=""
+                class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded"
+                style="object-fit: cover; width: 100%; height: 100%; margin-left: 20px;">
+        </div>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette mt-5 align-items-center " style="margin-bottom:4%">
+    <div class="col-md-4">
+      <div style="width: 300px; height: 325px; overflow: hidden; border-radius: 10px; margin-left:20%;">
+          <img src="../images/contamination.png" alt=""
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded"
+              style="object-fit: cover; width: 100%; height: 100%; margin-left: 20px;">
+      </div>
+  </div>
+    <div class="col-md-8">
+        <p class="lead display-6 text-center">Contamination of Recycable Materials</p>
+        <p class="lead">Contamination of recyclable materials is a persistent issue in Singapore's recycling system. The lack of awareness and proper recycling practices (such as the need for a recyclable item to be washed or rinsed) by Singaporeans can lead to the mixing of recyclables with non-recyclables. This contamination hampers the efficiency of recycling processes and reduces the quality of recycled materials.
+        </p>
+        <p><strong style="color: darkgreen;">Fun Fact:</strong> According to a 2018 study by the Singapore Environment Council (SEC), 70% of respondents did not fully know which items were considered recyclable. In addition, 40% of trash placed into recycling bins are contaminated, and hence are considered as non-recycable wastes.</p>
+
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette mt-5 align-items-center " style="margin-bottom:4%">
+  <div class="col-md-8">
+      <p class="lead display-6 text-center">Regulations are not enough</p>
+      <p class="lead">While regulations and policies are in place to manage waste in Singapore, they are not sufficient to address the root causes of waste generation and to promote sustainable waste management practices. As stringent regulations on sustainablility may affect the economy, the government has to strike a balance between economic growth and environmental sustainability. This led to the slow progress in implementing more sustainable waste management practices.
+      </p>
+      <p><strong style="color: darkgreen;">Fun Fact:</strong> Minister for Sustainability and the Environment, Grace Fu, Singapore is not “in a hurry” to ban plastic bags because it burns waste to produce energy. </p>
+  </div>
+  <div class="col-md-4">
+    <div style="width: 300px; height: 325px; overflow: hidden; border-radius: 10px; margin-left:20%;">
+        <img src="../images/regulations.jpg" alt=""
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded"
+            style="object-fit: cover; width: 100%; height: 100%; margin-left: 20px;">
+    </div>
+</div>
+</div>
+  
+
+      </div>
+
+    <!--END CONTENT -->
+
+    <!--add a line seperator here-->
+          <div class="col-12">
+            <hr style="border-top: 1px solid #4a694c; display:flex; margin:auto; margin-top:10px;">
+          </div>
+      
+  
+  <!-- Bottom Navbar -->
+<div style="display: flex; margin: auto; width: 90%; padding: 10px; align-items: flex-start;">
+
+  <div style="margin-left:5%; margin-right: 6%; width: 150px; height: 140px; overflow: hidden;">
+      <img src="../images/binlogo.png" alt="Learn" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+
+  <!-- Education Category -->
+  <div style="margin-right: 7%;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Education</p>
+      <a href="../Problem/problem.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Problem of Waste Management</a>
+      <a href="../Initiatives/initiative.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Implemented Initiatives</a>
+      <a href="../Stakeholders/stakeholder.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Stakeholders involved</a>
+  </div>
+  <!-- News Category -->
+  <div style="margin-right: 10%; min-height: 150px;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">News</p>
+    <a href="../News/news.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Latest news</a>
+</div>
+  <!-- Quiz Category -->
+  <div style="margin-right: 7%; min-height: 150px;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Quiz</p>
+      <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Sorting</a>
+      <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Management</a>
+  </div>
+
+  <!-- Game Category -->
+  <div style="margin-right: 10%; min-height: 150px;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Game</p>
+      <a href="../Game/game.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Match the cards!</a>
+  </div>
+</div>
+    

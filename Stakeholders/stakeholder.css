@@ -1,0 +1,39 @@
+.tab {
+    display: flex;
+    width: 90%;
+    margin: 0 auto; 
+    padding: 0;
+    background-color: #4a694c;
+    border-radius: 5px;
+}
+
+.tab button {
+    flex: 1; 
+    padding: 10px 20px;
+    background-color: transparent; /* Transparent background */
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+
+.tab button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px; 
+    background-color: #fff; 
+}
+
+.tab button:last-child::after {
+    display: none;
+}
+
+.tab button:hover {
+    background-color: #103315;
+    transition: background-color 0.3s; 
+}

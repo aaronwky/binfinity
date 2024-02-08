@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@next"></script>
+    
+    <!-- Slick Slide -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="stakeholder.css" />
+    <script src="stakeholder.js"></script>
+    <style>
+        .navbar-nav {
+          display: flex;
+          justify-content: space-between;
+          flex-grow: 1;
+        }
+      
+        body {
+          overflow-x: hidden;
+        }
+      
+        .btn-outline-secondary:hover {
+          border-color: #4CAF50; 
+          color: #4CAF50; 
+          background-color: transparent !important;
+        }
+      
+      </style>
+  
+</head>
+
+<body>
+<div id="root">
+    <!-- Navbar -->
+    <div style="background-color: #4a694c; overflow: hidden; padding:10px;">
+        <a href="../Home/home.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+        <a href="../Problem/problem.html" style="float: left; display: block; color: #8affd6; text-align: center; padding: 14px 16px; text-decoration: underline; font-weight: bold;">Learn</a>
+        <a href="../News/news.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">News</a>
+        <a href="../Quiz/quiz.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Quiz</a>
+        <a href="../Game/game.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Game</a>
+      </div>
+
+    <!-- Secondary Navbar-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+            <a href="../Problem/problem.html" style="color: #333; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Problem of Waste Management</a>
+        </div>
+  
+          <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+              <a href="../Initiatives/initiative.html" style="color: #333; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Implemented Initiatives</a>
+          </div>
+
+          <div class="col-md-4 text-center" style="background-color: #fff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+            <a href="../Stakeholders/stakeholder.html" style="font-weight: bold; color: #4a694c; text-decoration: none; font-size: 18px; padding: 15px; display: block;">Stakeholders Involved</a>
+        </div>
+      </div>
+  </div>
+  
+    <!--START CONTENT -->
+    <div class="row">
+      <div id="explore-banner-text" style="background-color: #4a694c; padding: 2.7%; color: white;">
+          <h1>Stakeholder Contributions</h1>
+          <h10>Find out more about the different stakeholders involved in waste management and how they can contribute to the cause.</h10>
+      </div>
+  </div>
+
+    <div class="tab" style="margin-top:2%;">
+        <button id="GovernmentTabButton" class="tablinks" onclick="openTab('Government')">Government</button>
+        <button id="BusinessesTabButton" class="tablinks" onclick="openTab('Businesses')">Businesses</button>
+        <button id="IndividualTabButton" class="tablinks" onclick="openTab('Individual')">Individual</button>
+    </div>
+
+    <!-- Government Tab -->
+    <div id="Government" class="tab-content">
+      <section>
+        <div class="container">
+          <div class="row pt-2">
+            <div class="col-lg-12">
+            </div>
+          </div>
+          <div class="row pt-2">
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/policy.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Policy Enforcement</h5>
+                  <p class="card-text mb-4"> The government can implement and enforce strict waste management policies and regulations to encourage responsible waste disposal. At the same time, they can provide financial incentives or grants for businesses that develop and adopt innovative waste reduction and recycling technologies.</p>
+                </div>
+              </div>
+            </div>
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/awareness.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Public Awareness Campaigns</h5>
+                  <p class="card-text mb-4">The government can run public awareness campaigns to educate citizens and businesses about proper waste segregation, recycling practices, and the environmental impact of waste. This approach can help instill responsible waste disposal habits among Singaporeans.</p>
+                </div>
+              </div>
+            </div>
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/infra.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Infrastructure Investment</h5>
+                  <p class="card-text mb-4">The government can continue invest in modern waste management infrastructure, including recycling facilities and waste-to-energy plants, to handle different types of waste efficiently. They can explore other forms of waste to energy technology beyond just incineration such as Mechanical Biological Treatment or Gasigication as well. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Businesses Tab -->
+    <div id="Businesses" class="tab-content">
+      <section>
+        <div class="container">
+          <div class="row pt-2">
+            <div class="col-lg-12">
+            </div>
+          </div>
+          <div class="row pt-2">
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/audit.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Waste Audits</h5>
+                  <p class="card-text mb-4"> Businesses can conduct regular waste audits to assess their waste composition and volume. By identifying key areas for improvement, they can implement targeted strategies to reduce waste generation, promoting sustainable practices and minimizing environmental impact.</p>
+                </div>
+              </div>
+            </div>
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/circle.JPG" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Circular Economy Practices</h5>
+                  <p class="card-text mb-4">Businesses can implement circular economy principles by designing products for reuse, recycling, or repurposing, thereby reducing the generation of wastes from commercial activities and henceforth reduce the impact on the environment.</p>
+                </div>
+              </div>
+            </div>
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/susdept.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Investing in a Sustainability Department</h5>
+                  <p class="card-text mb-4">The establishment of a sustainability department serves as a crucial measure for businesses to forster environmental responsibility. This dedicated department focuses on integrating sustainable practices, reducing environmental impact, and ensuring corporate social responsibility, aligning businesses with global sustainability goals. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Individual Tab -->
+    <div id="Individual" class="tab-content">
+      <section>
+        <div class="container">
+          <div class="row pt-2">
+            <div class="col-lg-12">
+            </div>
+          </div>
+          <div class="row pt-2">
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/segregate.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Waste Segregation</h5>
+                  <p class="card-text mb-4"> Individuals can practice proper waste segregation at home by establishing designated bins for recyclables, organic waste, and general waste. This ensures that materials are sorted efficiently, facilitating effective recycling processes and reducing the environmental impact of improper disposal.</p>
+                </div>
+              </div>
+            </div>
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/cleanup.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Participation in Community Initiatives</h5>
+                  <p class="card-text mb-4">Individuals can actively engage in community clean-up events to contribute to a cleaner environment. Supporting local initiatives focused on waste reduction and environmental conservation fosters a sense of communal responsibility, creating a positive impact beyond individual efforts.</p>
+                </div>
+              </div>
+            </div>
+            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+              <div class="card">
+                <img src="../images/bazaar.JPG" class="card-img-top" alt="Card Image">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Mindful Consumption</h5>
+                  <p class="card-text mb-4">Individuals should embrace mindful consumption by making informed choices when purchasing products. Opt for items with minimal packaging or those crafted from sustainable materials. This conscious decision-making promotes environmentally friendly practices and encourages businesses to adopt sustainable production methods. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+</div>
+
+    <!--END CONTENT -->
+           
+  <!-- Bottom Navbar -->
+  <div class="col-12">
+    <hr style="border-top: 1px solid #4a694c; display:flex; margin:auto; margin-top:10px;">
+  </div>
+
+<div style="display: flex; margin: auto; width: 90%; padding: 10px; align-items: flex-start;">
+
+  <div style="margin-left:5%; margin-right: 6%; width: 150px; height: 140px; overflow: hidden;">
+      <img src="../images/binlogo.png" alt="Learn" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+
+  <!-- Education Category -->
+  <div style="margin-right: 7%;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Education</p>
+      <a href="../Problem/problem.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Problem of Waste Management</a>
+      <a href="../Initiatives/initiative.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Implemented Initiatives</a>
+      <a href="../Stakeholders/stakeholder.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Stakeholders involved</a>
+  </div>
+  <!-- News Category -->
+  <div style="margin-right: 10%; min-height: 150px;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">News</p>
+    <a href="../News/news.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Latest news</a>
+</div>
+  <!-- Quiz Category -->
+  <div style="margin-right: 7%; min-height: 150px;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Quiz</p>
+      <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Sorting</a>
+      <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Management</a>
+  </div>
+
+  <!-- Game Category -->
+  <div style="margin-right: 10%; min-height: 150px;">
+      <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Game</p>
+      <a href="../Game/game.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Match the cards!</a>
+  </div>
+</div>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <!-- Slick Slide -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="quiz.css" />
+    <script src="quiz.js"></script>
+    
+    <style>
+        .navbar-nav {
+          display: flex;
+          justify-content: space-between;
+          flex-grow: 1;
+        }
+      
+        body {
+          overflow-x: hidden;
+        }
+      
+        .btn-outline-secondary:hover {
+          border-color: #4CAF50; 
+          color: #4CAF50; 
+          background-color: transparent !important;
+        }
+
+        #app {
+        background-color: beige;
+        border-radius: 0 0 10px 10px;
+        position: relative;
+        height: 50vh;
+        margin-bottom:2%;   
+        width:80%;
+        margin:auto;
+        }
+
+        #title {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+        background-color: #447766;
+        border: 2px;
+        padding:8px;
+        }
+
+        #question {
+        font-size: 20px;
+        padding-left:2%;
+        }
+
+        #options label {
+        font-size: 16px;
+        }
+
+        /* Media query for screens with a width of 575px or smaller */
+        @media (max-width: 575px) {
+        #question {
+            font-size: 16px;
+            padding-left:1%;
+        }
+
+        #options label {
+            font-size: 18px;
+            padding-left:1%;
+        }
+        }
+
+        /* Media query for screens with a width of 992px or smaller */
+        @media (max-width: 992px) {
+        #question {
+            font-size: 16px;
+        }
+
+        #options label {
+            font-size: 12px;
+        }
+        }
+
+        /* Style the "Next" button */
+        #next-button {
+        background-color: #447766;
+        color: #fff;
+        padding: 6px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        bottom: 2.5%;
+        right: 10%;
+        }
+
+        #next-button:hover {
+        background-color: #103315;
+        }
+
+        #quiz-container {
+        border: 20px;
+        }
+
+        /* Style the options */
+        #options {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+        }
+
+        #options label {
+        color: #000000;
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        box-shadow: 0 0 0 2px #9f9f9f;
+        transition: background-color 0.3s;
+        }
+
+        #options label:hover {
+        background-color: rgb(228, 228, 216);
+        }
+
+        #options label.selected {
+        background-color: rgb(228, 228, 216);
+        }
+
+        #result {
+        text-align: center;
+        margin-top: auto;
+        padding: 40px;
+        color: #000000;
+        }
+
+        #result h2 {
+        font-size: 40px;
+        }
+
+        #result p {
+        font-size: 26px;
+        }
+
+        #reattempt-button {
+        background-color: #447766;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        bottom: 10%;
+        left: 50%; /* Center the button horizontally */
+        transform: translateX(-50%); /* Center the button horizontally */
+        }
+
+        #reattempt-button:hover {
+        background-color: #103315;
+        }
+      
+      </style>
+  
+</head>
+
+<body>
+<div id="root">
+    <!-- Navbar -->
+    <div style="background-color: #4a694c; overflow: hidden; padding:10px;">
+        <a href="../Home/home.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a>
+        <a href="../Problem/problem.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Learn</a>
+        <a href="../News/news.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">News</a>
+        <a href="../Quiz/quiz.html" style="float: left; display: block; color: #8affd6; text-align: center; padding: 14px 16px; text-decoration: underline; font-weight: bold;">Quiz</a>
+        <a href="../Game/game.html" style="float: left; display: block; color: #fff; text-align: center; padding: 14px 16px; text-decoration: none;">Game</a>
+      </div>
+  
+    <!--START CONTENT -->
+    <div id="app">
+        <div id="title">
+            <h1 style="font-family:cursive; color:rgb(255, 255, 255); text-align: center; margin-top:1%; margin-bottom:1%;">Waste Sorting Quiz</h1>
+        </div>
+
+        <div id="quiz-container" v-if="showQuiz" style="margin-top:1%;">
+            <div id="question">
+                <p>{{ questions[currentQuestion].question }}</p>
+            </div>
+            <div id="options">
+                <!-- Display options in full-length row with hover effect -->
+                <label
+                    v-for="(option, index) in questions[currentQuestion].options"
+                    :key="index"
+                    @click="selectOption(option)"
+                    :class="{ selected: selectedAnswer === option }"
+                >
+                    {{ option }}
+                    <input type="radio" :value="option" style="display: none;">
+                </label>
+            </div>
+            <button id="next-button" @click="nextQuestion">
+                {{ currentQuestion === questions.length - 1 ? "Finish" : "Next" }}
+            </button>
+        </div>
+
+        <div id="result" v-else>
+            <h2>Quiz Result</h2>
+            <p>Your Score: {{ score }} / {{questions.length}}</p>
+            <button id="reattempt-button" @click="reattemptQuiz">Reattempt Quiz</button>
+        </div>
+    </div>
+      
+    <!--END CONTENT -->
+           
+  <!-- Bottom Navbar -->
+  <div class="col-12">
+    <hr style="border-top: 1px solid #4a694c; display:flex; margin:auto; margin-top:10px;">
+  </div>
+
+<div style="display: flex; margin: auto; width: 90%; padding: 10px; align-items: flex-start;">
+
+  <div style="margin-left:5%; margin-right: 6%; width: 150px; height: 140px; overflow: hidden;">
+      <img src="../images/binlogo.png" alt="Learn" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+
+  <!-- Education Category -->
+  <div style="margin-right: 7%;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Education</p>
+    <a href="../Problem/problem.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Problem of Waste Management</a>
+    <a href="../Initiatives/initiative.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Implemented Initiatives</a>
+    <a href="../Stakeholders/stakeholder.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Stakeholders involved</a>
+</div>
+<!-- News Category -->
+<div style="margin-right: 10%; min-height: 150px;">
+  <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">News</p>
+  <a href="../News/news.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Latest news</a>
+</div>
+<!-- Quiz Category -->
+<div style="margin-right: 7%; min-height: 150px;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Quiz</p>
+    <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Sorting</a>
+    <a href="../Quiz/quiz.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Waste Management</a>
+</div>
+
+<!-- Game Category -->
+<div style="margin-right: 10%; min-height: 150px;">
+    <p style="margin: 0; font-weight: bold; color: #000; font-size: 22px;">Game</p>
+    <a href="../Game/game.html" style="display: block; color: #6f6e6e; text-decoration: none; margin: 10px 0;">Match the cards!</a>
+</div>
+</div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            showQuiz: true,
+            questions: [
+                {
+                    question: "1) Which category does clean plastic bottles belong to in Singapore's waste sorting system?",
+        answer: "Recyclable",
+        options: [
+            "Non-Recyclable",
+            "Compostable",
+            "Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "2) What should be done with used tissue paper according to Singapore's waste sorting guidelines?",
+        answer: "Non-Recyclable",
+        options: [
+            "Recyclable",
+            "Compostable",
+            "Non-Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "3) In which waste category do old electronic gadgets like smartphones belong in Singapore?",
+        answer: "E-Waste",
+        options: [
+            "Non-Recyclable",
+            "Compostable",
+            "Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "4) What is the correct category for used cooking oil in Singapore's waste sorting system?",
+        answer: "Non-Recyclable",
+        options: [
+            "Recyclable",
+            "Compostable",
+            "Non-Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "5) Where should empty glass bottles be disposed of in Singapore?",
+        answer: "Recyclable",
+        options: [
+            "Non-Recyclable",
+            "Compostable",
+            "Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "6) What is the proper waste category for food scraps and peels in Singapore?",
+        answer: "Compostable",
+        options: [
+            "Non-Recyclable",
+            "Compostable",
+            "Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "7) In Singapore, which waste category should used batteries be placed in?",
+        answer: "E-Waste",
+        options: [
+            "Non-Recyclable",
+            "Compostable",
+            "Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "8) Where should old clothes and textiles be disposed of according to Singapore's waste sorting guidelines?",
+        answer: "Non-Recyclable",
+        options: [
+            "Recyclable",
+            "Compostable",
+            "Non-Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "9) What is the correct waste category for newspapers and magazines in Singapore?",
+        answer: "Recyclable",
+        options: [
+            "Non-Recyclable",
+            "Compostable",
+            "Recyclable",
+            "E-Waste"
+        ]
+    },
+    {
+        question: "10) Where should used plastic bags be disposed of in Singapore's waste sorting system?",
+        answer: "Non-Recyclable",
+        options: [
+            "Recyclable",
+            "Compostable",
+            "Non-Recyclable",
+            "E-Waste"
+        ]
+    },
+            ],
+            currentQuestion: 0,
+            selectedAnswer: null,
+            score: 0
+        },
+        methods: {
+            nextQuestion() {
+                if (this.selectedAnswer === this.questions[this.currentQuestion].answer) {
+                    this.score++;
+                }
+                this.selectedAnswer = null;
+
+                if (this.currentQuestion < this.questions.length - 1) {
+                    this.currentQuestion++;
+                } else {
+                    this.showQuiz = false;
+                }
+            },
+            selectOption(option) {
+                this.selectedAnswer = option;
+            },
+            reattemptQuiz() {
+                this.currentQuestion = 0;
+                this.selectedAnswer = null;
+                this.score = 0;
+                this.showQuiz = true;
+            }
+        },
+    });
+
+    function resizeIframe() {
+      const iframe = document.getElementById('quizFrame');
+      const contentHeight = document.body.scrollHeight;
+      iframe.style.height = contentHeight + 'px';
+    }
+
+    // Call the resizeIframe function when the window is loaded and when the content changes (e.g., after selecting an answer).
+    window.addEventListener('load', resizeIframe);
+    window.addEventListener('resize', resizeIframe);
+</script>
+</body>
+</html>
